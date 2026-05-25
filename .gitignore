@@ -1,0 +1,5 @@
+.DS_Store
+Thumbs.db
+*.ai
+*.sketch
+node_modules/
