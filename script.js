@@ -78,8 +78,7 @@ function showPage(id) {
 function nav_go(id) { showPage(id); closeMob(); }
 
 function updateNav(id) {
-  const isHome = id === 'home';
-  if (isHome) { handleScroll(); } else { mainNav.classList.add('scrolled'); }
+  handleScroll(); // transparent on all pages at top; scrolled only when user scrolls
   document.querySelectorAll('.nav__link').forEach(l => l.classList.remove('active'));
   const map = {
     home: 'home', about: 'about', services: 'services',
@@ -99,9 +98,7 @@ function updateNav(id) {
 const mainNav = document.getElementById('mainNav');
 
 function handleScroll() {
-  const active = document.querySelector('.page.active');
-  const isHome = active && active.id === 'page-home';
-  mainNav.classList.toggle('scrolled', !(isHome && window.scrollY < 60));
+  mainNav.classList.toggle('scrolled', window.scrollY >= 60);
 }
 window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -144,46 +141,84 @@ function initReveal() {
 }
 initReveal();
 
-/* ─── GR8-style experience slider ─── */
+/* ─── GR8-style experience slider — infinite loop ─── */
 (function () {
-  const track  = document.getElementById('gr8Track');
-  const prev   = document.getElementById('gr8Prev');
-  const next   = document.getElementById('gr8Next');
-  const zoneL  = document.getElementById('gr8ZoneL');
-  const zoneR  = document.getElementById('gr8ZoneR');
-  const gr8Cur = document.getElementById('gr8Cur');
+  const track = document.getElementById('gr8Track');
+  const prev  = document.getElementById('gr8Prev');
+  const next  = document.getElementById('gr8Next');
   if (!track) return;
 
-  function getStep() {
-    const slide = track.querySelector('.gr8-slide');
-    return slide ? slide.offsetWidth + 24 : track.offsetWidth * 0.6;
-  }
-  function scrollDir(dir) {
-    track.scrollBy({ left: dir * getStep(), behavior: 'smooth' });
-  }
+  /* Build infinite track: [2×clones][originals][2×clones] */
+  const originals = Array.from(track.querySelectorAll('.gr8-slide'));
+  const N = originals.length;
+  if (N < 2) return;
 
-  prev.addEventListener('click', () => scrollDir(-1));
-  next.addEventListener('click', () => scrollDir(1));
+  const CLONES = 2; // sets of clones on each side
 
-  /* Hover-zone navigation (desktop only) */
-  if (window.matchMedia('(hover:hover)').matches) {
-    let scrollTimer;
-    function startZoneScroll(dir) {
-      scrollDir(dir);
-      scrollTimer = setInterval(() => scrollDir(dir), 900);
-    }
-    function stopZoneScroll() { clearInterval(scrollTimer); }
-
-    zoneL.addEventListener('mouseenter', () => { gr8Cur.textContent = 'PREV'; gr8Cur.style.opacity = '1'; startZoneScroll(-1); });
-    zoneL.addEventListener('mouseleave', () => { gr8Cur.style.opacity = '0'; stopZoneScroll(); });
-    zoneR.addEventListener('mouseenter', () => { gr8Cur.textContent = 'NEXT'; gr8Cur.style.opacity = '1'; startZoneScroll(1); });
-    zoneR.addEventListener('mouseleave', () => { gr8Cur.style.opacity = '0'; stopZoneScroll(); });
-
-    document.addEventListener('mousemove', e => {
-      gr8Cur.style.left = e.clientX + 'px';
-      gr8Cur.style.top  = e.clientY + 'px';
+  // Append clones at end
+  for (let c = 0; c < CLONES; c++) {
+    originals.forEach(s => {
+      const cl = s.cloneNode(true);
+      cl.setAttribute('aria-hidden', 'true');
+      track.appendChild(cl);
     });
   }
+  // Prepend clones at start (insert as fragment before first child)
+  const frag = document.createDocumentFragment();
+  for (let c = 0; c < CLONES; c++) {
+    originals.forEach(s => {
+      const cl = s.cloneNode(true);
+      cl.setAttribute('aria-hidden', 'true');
+      frag.appendChild(cl);
+    });
+  }
+  track.insertBefore(frag, track.firstChild);
+
+  // Re-register events on clones
+  track.querySelectorAll('.gr8-slide').forEach(s => {
+    s.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') s.click(); });
+  });
+  initCursorTargets();
+
+  function slideW() {
+    const s = track.querySelector('.gr8-slide');
+    return s ? s.offsetWidth + 24 : 400; // 24px = gap
+  }
+  function padL() {
+    return parseFloat(getComputedStyle(track).paddingLeft) || 0;
+  }
+
+  // Scroll to the start of the original slides (past CLONES×N prepended)
+  function goToOrigin() {
+    track.scrollLeft = padL() + CLONES * N * slideW();
+  }
+  requestAnimationFrame(goToOrigin);
+
+  // Smooth navigation via prev/next buttons
+  prev.addEventListener('click', () => track.scrollBy({ left: -slideW(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left:  slideW(), behavior: 'smooth' }));
+
+  // Infinite loop: silently jump when entering outer clone territory
+  let busy = false;
+  function loopCheck() {
+    if (busy) return;
+    const pL   = padL();
+    const sw   = slideW();
+    const bW   = N * sw;               // one full block width
+    const lo   = pL + bW;              // lower guard: if < this, jump forward
+    const hi   = pL + (CLONES + 1) * bW; // upper guard: if > this, jump back
+
+    if (track.scrollLeft < lo) {
+      busy = true;
+      track.scrollLeft += bW;
+      busy = false;
+    } else if (track.scrollLeft > hi) {
+      busy = true;
+      track.scrollLeft -= bW;
+      busy = false;
+    }
+  }
+  track.addEventListener('scroll', loopCheck, { passive: true });
 
   /* Active slide highlight */
   function setActive() {
@@ -194,8 +229,8 @@ initReveal();
     });
   }
   track.addEventListener('scroll', setActive, { passive: true });
-  window.addEventListener('resize', setActive);
-  setActive();
+  window.addEventListener('resize', () => { goToOrigin(); setTimeout(setActive, 50); });
+  setTimeout(setActive, 150);
 })();
 
 /* ─── Custom cursor ─── */
@@ -286,7 +321,4 @@ document.getElementById('cookieBtn')?.addEventListener('click', ev => {
   alert('Cookie preference settings will be connected once a consent platform is installed.');
 });
 
-/* ─── Keyboard: slide cards ─── */
-document.querySelectorAll('.gr8-slide').forEach(s => {
-  s.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') s.click(); });
-});
+/* ─── Keyboard: slide cards — registered inside slider IIFE (includes clones) ─── */

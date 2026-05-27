@@ -139,7 +139,23 @@ gtag('config','G-EGVGQKGH2D');
         <a href="#" class="btn btn--ghost" onclick="nav_go('contact');return false">Get In Touch</a>
       </div>
     </div>
-    <div class="hero__scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- Who We Are — homepage teaser -->
+  <section class="wwa-section section">
+    <div class="container">
+      <div class="wwa-inner">
+        <span class="divider divider--center reveal"></span>
+        <p class="t-label reveal reveal--d1" style="margin-top:1.5rem">Who We Are</p>
+        <h2 class="t-display wwa-inner-title reveal reveal--d1">Beyond Access.<br>Beyond Expectation.</h2>
+        <p class="t-body-lg reveal reveal--d2">La Dolce Vita Luxury Experience exists for travelers who know the difference between expensive and exclusive. We don't just design experiences, we orchestrate the impossible to create moments that linger forever. Our discerning clients trust us with their most precious commodity: their time.</p>
+        <p class="wwa-tagline reveal reveal--d3">Lavish. Distinctive. Visionary.</p>
+        <a href="#" class="btn btn--ghost-dark reveal reveal--d3" onclick="nav_go('about');return false">
+          About Us
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h12M7 1l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Services split -->
@@ -181,11 +197,6 @@ gtag('config','G-EGVGQKGH2D');
     </div>
 
     <div class="gr8-track-wrap">
-      <!-- Left hover zone -->
-      <div class="gr8-zone gr8-zone--left" id="gr8ZoneL"></div>
-      <!-- Right hover zone -->
-      <div class="gr8-zone gr8-zone--right" id="gr8ZoneR"></div>
-
       <div class="gr8-track" id="gr8Track">
 
         <div class="gr8-slide" onclick="nav_go('city')" role="button" tabindex="0" aria-label="City of Arts experience">
@@ -276,28 +287,6 @@ gtag('config','G-EGVGQKGH2D');
     </div>
   </section>
 
-  <!-- Our Values -->
-  <div class="values">
-    <div class="values__text">
-      <p class="t-label reveal">Our Values</p>
-      <h2 class="t-h2 reveal reveal--d1">The principles that shape every experience</h2>
-      <p class="t-body reveal reveal--d2">We believe true luxury lies in authenticity, discretion, craftsmanship, and meaningful moments that become lifelong memories.</p>
-      <ul class="values__list reveal reveal--d3">
-        <li>Complete discretion and absolute privacy for every client</li>
-        <li>Access that cannot be purchased through conventional means</li>
-        <li>Authentic Italian experiences — never staged, never superficial</li>
-        <li>White-glove service from first contact to final farewell</li>
-        <li>Enduring relationships with Italy's finest artisans and institutions</li>
-      </ul>
-    </div>
-    <div class="values__image">
-      <img src="images/ourvalues.JPG"
-           alt="Italian artisan guiding fabric through sewing machine — private atelier Florence"
-           loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-      <p class="values__image-caption" aria-hidden="true">Italian Artisan — Private Atelier, Florence</p>
-    </div>
-  </div>
-
   <!-- Statement -->
   <div class="statement">
     <p class="t-label statement__label">Our Commitment</p>
@@ -325,11 +314,7 @@ gtag('config','G-EGVGQKGH2D');
     <div class="hero__content">
       <p class="t-label hero__label">Our Story</p>
       <h1 class="t-h1 hero__title">Who We Are</h1>
-      <div class="hero__tags tag-list">
-        <span class="tag">Founded in Italy</span>
-        <span class="tag">White-Glove Concierge</span>
-        <span class="tag">Multilingual Team</span>
-      </div>
+      <p class="hero__subtitle">Italy's most discreet luxury concierge — curators of culture, taste, and exceptional access</p>
     </div>
   </section>
 
@@ -354,24 +339,40 @@ gtag('config','G-EGVGQKGH2D');
     </div>
   </section>
 
-  <div class="values">
-    <div class="values__text">
-      <p class="t-label reveal">What We Stand For</p>
-      <h2 class="t-h2 reveal reveal--d1">Discretion. Authenticity. Craft.</h2>
-      <p class="t-body reveal reveal--d2">Three words that govern every decision we make, every relationship we build, every experience we deliver.</p>
-      <ul class="values__list reveal reveal--d3">
-        <li>Your privacy is absolute — we operate without visibility</li>
-        <li>We do not stage Italy — we unlock it authentically</li>
-        <li>Every detail attended to with the care of Italian artisanship</li>
-        <li>Available before, during, and after every experience</li>
-      </ul>
+  <!-- Vision / Mission / Values -->
+  <section class="section" style="background:var(--cream-dark)">
+    <div class="container">
+      <div style="text-align:center">
+        <p class="t-label reveal">What Drives Us</p>
+        <h2 class="t-h2 text-navy reveal reveal--d1" style="margin-top:0.75rem">Vision. Mission. Values.</h2>
+      </div>
+      <div class="vmv-grid">
+        <div class="vmv-col reveal">
+          <div class="divider"></div>
+          <p class="t-label">Vision</p>
+          <h3 class="t-h3">To redefine what luxury travel truly means</h3>
+          <p class="t-body">We envision a world where extraordinary access is not accidental — where every extraordinary moment is conceived with such care and precision that it becomes a memory carried for a lifetime.</p>
+        </div>
+        <div class="vmv-col reveal reveal--d1">
+          <div class="divider"></div>
+          <p class="t-label">Mission</p>
+          <h3 class="t-h3">To orchestrate the impossible, beautifully</h3>
+          <p class="t-body">We connect our clients with the authentic heart of Italy — its artisans, its chefs, its cultural guardians — through relationships built over years of trust, discretion, and dedication.</p>
+        </div>
+        <div class="vmv-col reveal reveal--d2">
+          <div class="divider"></div>
+          <p class="t-label">Values</p>
+          <ul class="values__list">
+            <li>Complete discretion and absolute privacy</li>
+            <li>Authenticity — we unlock Italy, never stage it</li>
+            <li>No time wasted, ever</li>
+            <li>White-glove service from first contact to farewell</li>
+            <li>Enduring relationships with Italy's finest</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="values__image">
-      <img src="images/classicbuildingceiling.jpg"
-           alt="Italian architectural detail — the craft and beauty at the heart of everything we do"
-           loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    </div>
-  </div>
+  </section>
 
   <div class="statement">
     <h2 class="t-display reveal">Italy, as it<br>was <em>meant</em><br>to be seen.</h2>
@@ -386,7 +387,7 @@ gtag('config','G-EGVGQKGH2D');
      SERVICES
 ═══════════════════════════════════════════ -->
 <div class="page" id="page-services">
-  <section class="hero hero--short" aria-label="Services hero">
+  <section class="hero hero--page" aria-label="Services hero">
     <div class="hero__media">
       <img src="images/servicesheroimage.png"
            alt="Private jet interior — La Dolce Vita luxury services"
@@ -396,9 +397,7 @@ gtag('config','G-EGVGQKGH2D');
     <div class="hero__content">
       <p class="t-label hero__label">What We Offer</p>
       <h1 class="t-h1 hero__title">Our Services</h1>
-      <div class="hero__tags tag-list">
-        <span class="tag">Concierge</span><span class="tag">Bespoke</span><span class="tag">24 / 7</span>
-      </div>
+      <p class="hero__subtitle">Curated with precision. Executed with grace. Every element arranged for you alone.</p>
     </div>
   </section>
 
@@ -411,12 +410,26 @@ gtag('config','G-EGVGQKGH2D');
         <p class="t-body-lg reveal reveal--d2">From securing tailored accommodations that reflect pure elegance to arranging private transportation that transforms travel into an art form, every element is curated to create seamless, extraordinary experiences.</p>
       </div>
       <div class="svc-grid reveal">
-        <div class="svc-card"><div class="svc-card__num">01</div><h3 class="svc-card__title">Private Accommodations</h3><p class="svc-card__body">Historic palazzos, clifftop villas, and private estates — selected personally and secured with complete discretion.</p></div>
-        <div class="svc-card"><div class="svc-card__num">02</div><h3 class="svc-card__title">Museum &amp; Cultural Access</h3><p class="svc-card__body">After-hours private access to the Vatican, Uffizi, and Italy's greatest cultural institutions — beyond public reach.</p></div>
-        <div class="svc-card"><div class="svc-card__num">03</div><h3 class="svc-card__title">Michelin Dining</h3><p class="svc-card__body">Chef's tables, private tastings, and curated menus with Italy's most celebrated culinary masters.</p></div>
-        <div class="svc-card"><div class="svc-card__num">04</div><h3 class="svc-card__title">Private Transport</h3><p class="svc-card__body">Helicopters, historic trains, supercars, and crewed yachts arranged and accompanied with complete discretion.</p></div>
-        <div class="svc-card"><div class="svc-card__num">05</div><h3 class="svc-card__title">F1 &amp; Sports Access</h3><p class="svc-card__body">Paddock passes, garage visits, and team principal dinners at the world's greatest races and sporting events.</p></div>
-        <div class="svc-card"><div class="svc-card__num">06</div><h3 class="svc-card__title">Fashion Week Front Row</h3><p class="svc-card__body">Milan Fashion Week — front row seats, designer ateliers, and private stylist sessions with Italy's finest.</p></div>
+        <div class="svc-card">
+          <div class="svc-card__num">01</div>
+          <h3 class="svc-card__title">Private Accommodations</h3>
+          <p class="svc-card__body">Historic palazzos, clifftop villas, and private estates — selected personally and secured with complete discretion.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__num">02</div>
+          <h3 class="svc-card__title">Museum &amp; Cultural Access</h3>
+          <p class="svc-card__body">After-hours private access to the Vatican, Uffizi, and Italy's greatest cultural institutions — beyond public reach.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__num">03</div>
+          <h3 class="svc-card__title">Michelin Dining</h3>
+          <p class="svc-card__body">Chef's tables, private tastings, and curated menus with Italy's most celebrated culinary masters.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__num">04</div>
+          <h3 class="svc-card__title">Private Transport</h3>
+          <p class="svc-card__body">Helicopters, historic trains, supercars, and crewed yachts arranged and accompanied with complete discretion.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -434,7 +447,7 @@ gtag('config','G-EGVGQKGH2D');
      EXPERIENCES OVERVIEW
 ═══════════════════════════════════════════ -->
 <div class="page" id="page-experiences">
-  <section class="hero hero--short">
+  <section class="hero hero--page">
     <div class="hero__media">
       <img src="images/cityofartshero.jpg"
            alt="Florence Cathedral exterior — ornate marble facade under blue sky"
@@ -447,6 +460,17 @@ gtag('config','G-EGVGQKGH2D');
       <p class="hero__subtitle">Six categories of access. Infinite ways to discover Italy.</p>
     </div>
   </section>
+
+  <!-- Intro copy -->
+  <section class="section" style="background:var(--navy);text-align:center;padding:5rem var(--pad-h)">
+    <div style="max-width:800px;margin:0 auto">
+      <p class="t-label reveal" style="margin-bottom:1.5rem">Your Once-In-A-Lifetime Experience</p>
+      <h2 class="t-h2 reveal reveal--d1" style="color:var(--white);margin-bottom:2rem">You didn't come here to follow guidebooks.</h2>
+      <p class="t-body-lg reveal reveal--d2" style="color:rgba(255,255,255,0.65);max-width:62ch;margin:0 auto 1.5rem">You came to go beyond velvet ropes, to taste wines that have never left family cellars, to meet artisans whose secrets have been guarded for centuries. This is where your story begins — not with what everyone can do, but with what only you will experience.</p>
+      <p class="t-body reveal reveal--d3" style="color:rgba(255,255,255,0.45);font-style:italic;max-width:56ch;margin:0 auto">At LDV, we offer a selection of exclusive experiences designed to immerse you in the essence of luxury travel — celebrating culture, cuisine, and craftsmanship.</p>
+    </div>
+  </section>
+
   <div class="exp-blog">
     <div class="exp-blog-inner">
       <div class="exp-blog-grid">
@@ -534,10 +558,10 @@ gtag('config','G-EGVGQKGH2D');
 
 <!-- CITY OF ARTS -->
 <div class="page" id="page-city">
-  <section class="hero hero--page"><div class="hero__media"><img src="images/cityofartshero.jpg" alt="Florence Cathedral exterior — ornate marble facade under blue sky" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Cultural Access</p><h1 class="t-h1 hero__title">City of Arts</h1><div class="hero__tags tag-list"><span class="tag">Private Viewings</span><span class="tag">Living Artists</span><span class="tag">Ancient Palazzi</span></div></div></section>
+  <section class="hero hero--page"><div class="hero__media"><img src="images/cityofartshero.jpg" alt="Florence Cathedral exterior — ornate marble facade under blue sky" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Cultural Access</p><h1 class="t-h1 hero__title">City of Arts</h1><p class="hero__subtitle">Private access to Italy's most extraordinary cultural treasures and artistic heritage</p></div></section>
   <section class="section"><div class="container"><div class="exp-detail">
     <div><p class="t-label reveal">The Experience</p><h2 class="t-h2 reveal reveal--d1">Private access to Italy's most extraordinary cultural treasures</h2><p class="t-body-lg reveal reveal--d2" style="margin:1.5rem 0">Italy's artistic heritage is vast — but the most profound encounters happen away from the crowds. We open private chapels, undisclosed museum wings, living artists' studios, and historic family palazzi unavailable through any public channel.</p><p class="t-body reveal reveal--d3">From Venice's last traditional glassblowers to Florence's under-restoration Renaissance masterpieces, each experience is singular, intimate, and deeply informed by years of trusted relationships with Italy's cultural guardians.</p></div>
-    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Private museum after-hours access</p><p>Guided by art historians &amp; curators</p><p>Living artist studio visits</p><p>Historic palazzo private tours</p><p>Cultural institution introductions</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">Destinations</p><p>Venice · Florence · Rome</p><p>Milan · Siena · Naples</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
+    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Private museum after-hours access</p><p>Guided by art historians &amp; curators</p><p>Living artist studio visits</p><p>Historic palazzo private tours</p><p>Cultural institution introductions</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">KEY Destinations</p><p>Venice · Florence · Rome</p><p>Milan · Siena · Naples</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
   </div></div></section>
   <div class="exp-blog">
     <div class="exp-blog-inner">
@@ -586,10 +610,10 @@ gtag('config','G-EGVGQKGH2D');
 
 <!-- CULINARY & WINE -->
 <div class="page" id="page-culinary">
-  <section class="hero hero--page"><div class="hero__media"><img src="images/culinarywinehero.jpg" alt="Black truffle shaved over handmade pasta — private Italian culinary experience" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Gastronomy</p><h1 class="t-h1 hero__title">Culinary &amp; Wine</h1><div class="hero__tags tag-list"><span class="tag">Private Cellar Dinners</span><span class="tag">Michelin Access</span><span class="tag">Vineyard Experiences</span></div></div></section>
+  <section class="hero hero--page"><div class="hero__media"><img src="images/culinarywinehero.jpg" alt="Black truffle shaved over handmade pasta — private Italian culinary experience" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Gastronomy</p><h1 class="t-h1 hero__title">Culinary &amp; Wine</h1><p class="hero__subtitle">Italy's finest tables, rarest vintages, and culinary secrets reserved entirely for you</p></div></section>
   <section class="section"><div class="container"><div class="exp-detail">
     <div><p class="t-label reveal">The Experience</p><h2 class="t-h2 reveal reveal--d1">Italy's finest tables and rarest vintages — reserved for you</h2><p class="t-body-lg reveal reveal--d2" style="margin:1.5rem 0">From reserved dinners in centuries-old wine cellars to private mornings with Michelin-starred chefs in their home kitchens, our culinary experiences take you behind the apron.</p><p class="t-body reveal reveal--d3">We know the winemakers who open their doors only on request, the restaurants that seat no more than eight, and the truffle hunters who work before dawn in regions few visitors ever reach.</p></div>
-    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Private vineyard estate dinners</p><p>Michelin chef kitchen experiences</p><p>Truffle hunting &amp; market visits</p><p>Olive oil harvest participation</p><p>Rare wine cellar tastings</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">Regions</p><p>Tuscany · Piedmont · Sicily</p><p>Veneto · Umbria · Campania</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
+    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Private vineyard estate dinners</p><p>Michelin chef kitchen experiences</p><p>Truffle hunting &amp; market visits</p><p>Olive oil harvest participation</p><p>Rare wine cellar tastings</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">KEY Regions</p><p>Tuscany · Piedmont · Sicily</p><p>Veneto · Umbria · Campania</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
   </div></div></section>
   <div class="exp-blog">
     <div class="exp-blog-inner">
@@ -638,10 +662,10 @@ gtag('config','G-EGVGQKGH2D');
 
 <!-- SPORTS -->
 <div class="page" id="page-sports">
-  <section class="hero hero--page"><div class="hero__media"><img src="images/sportshero.JPG" alt="Formula 1 Red Bull Racing car in garage — VIP paddock access Italy" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Sports &amp; Adventure</p><h1 class="t-h1 hero__title">Sports Adventures</h1><div class="hero__tags tag-list"><span class="tag">Luxury Events</span><span class="tag">VIP Experiences</span><span class="tag">Cultural Celebrations</span></div></div></section>
+  <section class="hero hero--page"><div class="hero__media"><img src="images/sportshero.JPG" alt="Formula 1 Red Bull Racing car in garage — VIP paddock access Italy" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Sports &amp; Adventure</p><h1 class="t-h1 hero__title">Sports Adventures</h1><p class="hero__subtitle">Privileged access to world-class sporting events and private athletic adventures across Italy</p></div></section>
   <section class="section"><div class="container"><div class="exp-detail">
     <div><p class="t-label reveal">The Experience</p><h2 class="t-h2 reveal reveal--d1">Privileged access to world-class sporting events and competitions</h2><p class="t-body-lg reveal reveal--d2" style="margin:1.5rem 0">We secure what cannot be bought at the box office — championship paddock passes, courtside boxes at major tournaments, VIP hospitality at historic circuits, and private introductions to sporting legends.</p><p class="t-body reveal reveal--d3">Formula 1 at Monza. Cycling through the Dolomites with professional guides. Private sailing charters on Lake Como. Each experience combines sporting excellence with the comfort and discretion our clients expect.</p></div>
-    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Formula 1 &amp; MotoGP paddock access</p><p>Private yacht racing experiences</p><p>Cycling with professional guides</p><p>VIP tennis and golf hospitality</p><p>Private sporting estate access</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">Key Events</p><p>Italian Grand Prix · Tour de France</p><p>Internazionali BNL · Ryder Cup</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
+    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Formula 1 &amp; MotoGP paddock access</p><p>Private yacht racing experiences</p><p>Cycling with professional guides</p><p>VIP tennis and golf hospitality</p><p>Private sporting estate access</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">KEY Events</p><p>Italian Grand Prix · Tour de France</p><p>Internazionali BNL · Ryder Cup</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
   </div></div></section>
   <div class="exp-blog">
     <div class="exp-blog-inner">
@@ -674,12 +698,12 @@ gtag('config','G-EGVGQKGH2D');
         </div>
         <div class="exp-blog-card reveal reveal--d2">
           <div class="exp-blog-card__img">
-            <img src="images/boat.jpeg" alt="Private sailing boat on Italian lake" loading="lazy">
+            <img src="images/grapeharvest.jpg" alt="Tuscan countryside cycling route — private bike tour Italy" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Lake Como</p>
-            <h3 class="exp-blog-card__title">Sailing the Northern Lakes</h3>
-            <p class="exp-blog-card__text">A crewed private charter on Lake Como — following routes unknown to most visitors, with a lakeside dinner at a villa accessible only from the water.</p>
+            <p class="exp-blog-card__label">Tuscany &amp; Dolomites</p>
+            <h3 class="exp-blog-card__title">Private Bike Tour</h3>
+            <p class="exp-blog-card__text">A curated cycling journey through Tuscany's vineyard roads or the Dolomite passes — guided by a professional cyclist, with private villa stays and sommelier dinners along the route.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
@@ -690,7 +714,7 @@ gtag('config','G-EGVGQKGH2D');
 
 <!-- EVENTS -->
 <div class="page" id="page-events">
-  <section class="hero hero--page"><div class="hero__media"><img src="images/carnivalmaskvenice.JPG" alt="Venetian carnival mask — elaborate gold and red costume" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Celebrations &amp; Fashion</p><h1 class="t-h1 hero__title">Events</h1><div class="hero__tags tag-list"><span class="tag">Private Weddings</span><span class="tag">Milan Fashion Week</span><span class="tag">Corporate Retreats</span></div></div></section>
+  <section class="hero hero--page"><div class="hero__media"><img src="images/carnivalmaskvenice.JPG" alt="Venetian carnival mask — elaborate gold and red costume" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Celebrations &amp; Fashion</p><h1 class="t-h1 hero__title">Events</h1><p class="hero__subtitle">Bespoke celebrations and exclusive access to Italy's most coveted cultural events</p></div></section>
   <section class="section"><div class="container"><div class="exp-detail">
     <div><p class="t-label reveal">The Experience</p><h2 class="t-h2 reveal reveal--d1">Bespoke celebrations conceived and executed with precision</h2><p class="t-body-lg reveal reveal--d2" style="margin:1.5rem 0">We plan and produce private events at Italy's most extraordinary venues — from hilltop vineyard weddings in Tuscany to intimate palazzo dinners in Venice, and front-row seats at Milan Fashion Week.</p><p class="t-body reveal reveal--d3">Our network includes the most exclusive venues, the most celebrated designers, and the most sought-after caterers in Italy. Every celebration is an original.</p></div>
     <div><div class="exp-sidebar-box reveal"><p class="t-label">Event Types</p><p>Private weddings &amp; ceremonies</p><p>Milan Fashion Week — front row</p><p>Corporate retreats &amp; incentives</p><p>Anniversary &amp; milestone celebrations</p><p>Intimate private dinners</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Enquire About Events</a></div>
@@ -715,23 +739,23 @@ gtag('config','G-EGVGQKGH2D');
         </div>
         <div class="exp-blog-card reveal reveal--d1">
           <div class="exp-blog-card__img">
-            <img src="images/carnivalmaskvenice.JPG" alt="Venetian carnival mask costume" loading="lazy">
+            <img src="images/carnivalmaskvenice.JPG" alt="Venice Carnival — Ballo del Doge exclusive access" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
             <p class="exp-blog-card__label">Venice</p>
-            <h3 class="exp-blog-card__title">A Venetian Masked Gala</h3>
-            <p class="exp-blog-card__text">An intimate Carnival-season soirée in a canal-side palazzo, by invitation only — costumed, candlelit, and attended by perhaps twenty guests in one of Europe's most beautiful rooms.</p>
+            <h3 class="exp-blog-card__title">Carnival with Ballo del Doge</h3>
+            <p class="exp-blog-card__text">Private access to the legendary Ballo del Doge — Venice's most exclusive Carnival ball, held in the 15th-century Palazzo Pisani Moretta, with costumed performers, opera, and candlelit grandeur.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
         <div class="exp-blog-card reveal reveal--d2">
           <div class="exp-blog-card__img">
-            <img src="images/venicecarnicalmaskedman.jpg" alt="Private celebration at Italian estate" loading="lazy">
+            <img src="images/venicecarnicalmaskedman.jpg" alt="Palio di Siena — historic horse race Tuscany" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Tuscany</p>
-            <h3 class="exp-blog-card__title">A Private Celebration</h3>
-            <p class="exp-blog-card__text">An entirely private ceremony and dinner at a hilltop Tuscan estate — arranged down to the last petal, and experienced by no one else, ever again, in the same way.</p>
+            <p class="exp-blog-card__label">Siena, Tuscany</p>
+            <h3 class="exp-blog-card__title">Palio di Siena</h3>
+            <p class="exp-blog-card__text">The most dramatic spectacle in Italy — private palazzo windows overlooking the Campo, pre-race access to the competing contrade, and a candlelit dinner with the winning neighbourhood after the race.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
@@ -742,10 +766,10 @@ gtag('config','G-EGVGQKGH2D');
 
 <!-- CRAFTMANSHIP -->
 <div class="page" id="page-craftmanship">
-  <section class="hero hero--page"><div class="hero__media"><img src="images/craftmanshiphero.JPG" alt="Hands guiding cream fabric through sewing machine — Italian artisan atelier" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Heritage &amp; Making</p><h1 class="t-h1 hero__title">Craftmanship</h1><div class="hero__tags tag-list"><span class="tag">Artisan Workshops</span><span class="tag">Masterful Creations</span><span class="tag">Heritage Tours</span></div></div></section>
+  <section class="hero hero--page"><div class="hero__media"><img src="images/craftmanshiphero.JPG" alt="Hands guiding cream fabric through sewing machine — Italian artisan atelier" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Heritage &amp; Making</p><h1 class="t-h1 hero__title">Craftmanship</h1><p class="hero__subtitle">Italy's greatest living artisans open their private workshops for you alone</p></div></section>
   <section class="section"><div class="container"><div class="exp-detail">
     <div><p class="t-label reveal">The Experience</p><h2 class="t-h2 reveal reveal--d1">Italy's greatest living artisans open their private workshops</h2><p class="t-body-lg reveal reveal--d2" style="margin:1.5rem 0">Bespoke leather goods in Florence, haute couture in Milan, Murano glassblowing in Venice. These are experiences unavailable through any public channel — relationships built over years with Italy's most revered makers.</p><p class="t-body reveal reveal--d3">You do not simply observe. You participate. You commission. You leave with something made by hand, made with intention, made for you alone.</p></div>
-    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Private atelier access</p><p>Bespoke leather goods commission</p><p>Murano glassblowing session</p><p>Haute couture appointments</p><p>Ceramics &amp; mosaic masters</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">Cities</p><p>Florence · Venice · Milan</p><p>Faenza · Deruta · Naples</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
+    <div><div class="exp-sidebar-box reveal"><p class="t-label">May include</p><p>Private atelier access</p><p>Bespoke leather goods commission</p><p>Murano glassblowing session</p><p>Haute couture appointments</p><p>Ceramics &amp; mosaic masters</p></div><div class="exp-sidebar-box reveal reveal--d1"><p class="t-label">KEY Cities</p><p>Florence · Venice · Milan</p><p>Faenza · Deruta · Naples</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Commission This Experience</a></div>
   </div></div></section>
   <div class="exp-blog">
     <div class="exp-blog-inner">
@@ -756,23 +780,23 @@ gtag('config','G-EGVGQKGH2D');
       <div class="exp-blog-grid">
         <div class="exp-blog-card reveal">
           <div class="exp-blog-card__img">
-            <img src="images/Craftmanship.jpg" alt="Italian artisan craftmanship leather Florence" loading="lazy">
+            <img src="images/Craftmanship.jpg" alt="Fine jewelry commission private atelier Italy" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Florence</p>
-            <h3 class="exp-blog-card__title">Bespoke Leather Goods</h3>
-            <p class="exp-blog-card__text">Commission a bespoke piece with a third-generation Florentine leather maestro in their private atelier — seen, measured, and crafted over two days in your presence.</p>
+            <p class="exp-blog-card__label">Florence &amp; Venice</p>
+            <h3 class="exp-blog-card__title">Fine Jewelry Commission</h3>
+            <p class="exp-blog-card__text">A private audience with one of Italy's master goldsmiths — selecting stones, discussing design, and commissioning a piece crafted by hand over days in the world's most storied ateliers.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
         <div class="exp-blog-card reveal reveal--d1">
           <div class="exp-blog-card__img">
-            <img src="images/ferrari.jpg" alt="Ferrari private factory visit Italy" loading="lazy">
+            <img src="images/ferrari.jpg" alt="Ferrari factory private access Maranello Italy" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Venice — Murano</p>
-            <h3 class="exp-blog-card__title">Murano Glassblowing Session</h3>
-            <p class="exp-blog-card__text">A private morning with one of Murano's last master glassblowers — not observed, but participated in. You leave with something irreplaceable, made by two pairs of hands.</p>
+            <p class="exp-blog-card__label">Maranello, Modena</p>
+            <h3 class="exp-blog-card__title">Automotive — The Ferrari Experience</h3>
+            <p class="exp-blog-card__text">Beyond the public museum — a private factory tour at Maranello, time on the Fiorano test circuit, and a sit-down with Ferrari craftsmen who build the cars by hand in silence.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
@@ -783,7 +807,7 @@ gtag('config','G-EGVGQKGH2D');
           <div class="exp-blog-card__body">
             <p class="exp-blog-card__label">Milan</p>
             <h3 class="exp-blog-card__title">Haute Couture Appointment</h3>
-            <p class="exp-blog-card__text">A private appointment at a Milanese atelier not open to the public — measured, discussed, and commissioned with complete confidence and no audience whatsoever.</p>
+            <p class="exp-blog-card__text">A private appointment at a Milanese atelier not open to the public — measured, discussed, and commissioned with complete confidence, no audience, and no catalogue.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
@@ -794,7 +818,7 @@ gtag('config','G-EGVGQKGH2D');
 
 <!-- PERSONALISATION -->
 <div class="page" id="page-personalisation">
-  <section class="hero hero--page"><div class="hero__media"><img src="images/personalisationhero.jpeg" alt="Private jet interior — fully personalised luxury travel experience" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Tailored Completely</p><h1 class="t-h1 hero__title">Personalisation</h1><div class="hero__tags tag-list"><span class="tag">Fully Bespoke</span><span class="tag">Your Rhythm</span><span class="tag">Your Vision</span></div></div></section>
+  <section class="hero hero--page"><div class="hero__media"><img src="images/personalisationhero.jpeg" alt="Private jet interior — fully personalised luxury travel experience" loading="lazy"></div><div class="hero__overlay"></div><div class="hero__content"><p class="t-label hero__label">Tailored Completely</p><h1 class="t-h1 hero__title">Personalisation</h1><p class="hero__subtitle">Every detail shaped by your character, pace, and vision — your Italy, entirely yours</p></div></section>
   <section class="section"><div class="container"><div class="exp-detail">
     <div><p class="t-label reveal">The Experience</p><h2 class="t-h2 reveal reveal--d1">Every detail shaped by your character, pace, and vision</h2><p class="t-body-lg reveal reveal--d2" style="margin:1.5rem 0">There is no catalogue here. You tell us who you are, what moves you, what you dream Italy could be — and we design an experience around that completely. Duration, pace, company, aesthetic: all yours to define.</p><p class="t-body reveal reveal--d3">This is the purest expression of what we do — a blank page, your story, written in Italy.</p></div>
     <div><div class="exp-sidebar-box reveal"><p class="t-label">How It Works</p><p>Initial discovery conversation</p><p>Bespoke itinerary design</p><p>Full logistics &amp; coordination</p><p>On-the-ground accompaniment</p><p>Post-experience reflection</p></div><a href="#" class="btn btn--primary" style="width:100%;justify-content:center" onclick="nav_go('contact');return false">Begin the Conversation</a></div>
@@ -808,34 +832,34 @@ gtag('config','G-EGVGQKGH2D');
       <div class="exp-blog-grid">
         <div class="exp-blog-card reveal">
           <div class="exp-blog-card__img">
-            <img src="images/gate-photo-2.jpg" alt="Private estate gate Italy bespoke journey" loading="lazy">
+            <img src="images/duomomilano.jpg" alt="Milan private concierge luxury experience" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Amalfi to the Dolomites</p>
-            <h3 class="exp-blog-card__title">The Italian Road Trip</h3>
-            <p class="exp-blog-card__text">Coast to mountain in a vintage Ferrari, with curated stops, private estates, and a different world-class sommelier each evening. Duration: entirely yours to define.</p>
+            <p class="exp-blog-card__label">Milan</p>
+            <h3 class="exp-blog-card__title">Milan — Fashion, Design &amp; Art</h3>
+            <p class="exp-blog-card__text">Private atelier access, curated design district walks with a cultural insider, and a chef's table dinner in a historic Milanese courtyard. Three days in Italy's most contemporary city.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
         <div class="exp-blog-card reveal reveal--d1">
           <div class="exp-blog-card__img">
-            <img src="images/capri.jpg" alt="Capri island private luxury access Italy" loading="lazy">
+            <img src="images/classicbuildingceiling.jpg" alt="Rome private palazzo access luxury Italy" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Florence · Siena · Naples</p>
-            <h3 class="exp-blog-card__title">The Cultural Immersion</h3>
-            <p class="exp-blog-card__text">Seven days — no crowds, no queues, only private access and meaningful encounters with the people who define Italian culture today. Every detail shaped around you.</p>
+            <p class="exp-blog-card__label">Rome</p>
+            <h3 class="exp-blog-card__title">Rome — Ancient &amp; Living</h3>
+            <p class="exp-blog-card__text">Before-dawn Vatican access, a private lunch in a garden palazzo closed to the public, and an evening with a papal archivist whose family has served the Holy See for generations.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
         <div class="exp-blog-card reveal reveal--d2">
           <div class="exp-blog-card__img">
-            <img src="images/privatejet.png" alt="Private jet interior luxury Italy" loading="lazy">
+            <img src="images/capri.jpg" alt="Sicily private luxury immersion Italy" loading="lazy">
           </div>
           <div class="exp-blog-card__body">
-            <p class="exp-blog-card__label">Italy, end to end</p>
-            <h3 class="exp-blog-card__title">The Indulgence</h3>
-            <p class="exp-blog-card__text">Begin and end by private charter. In between: the finest tables, estates, and artisans — nothing repeated, nothing rushed, nothing left to chance.</p>
+            <p class="exp-blog-card__label">Sicily</p>
+            <h3 class="exp-blog-card__title">Sicily — Baroque, Volcano &amp; Sea</h3>
+            <p class="exp-blog-card__text">A private estate in the Val di Noto, a sunrise ascent of Etna with a volcanologist, fishing at dawn with a local captain, and a feast prepared by a Sicilian nonna in her own kitchen.</p>
             <button class="exp-blog-card__enquire" onclick="nav_go('contact')">Enquire <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M6 1l5 5-5 5"/></svg></button>
           </div>
         </div>
@@ -872,14 +896,6 @@ gtag('config','G-EGVGQKGH2D');
             <p class="t-label">Email</p>
             <a href="mailto:info@ladolcevitaluxuryexperience.com">info@ladolcevitaluxuryexperience.com</a>
           </div>
-          <div class="contact-detail reveal reveal--d1">
-            <p class="t-label">Based In</p>
-            <p>Milan, Italy</p>
-          </div>
-          <div class="contact-detail reveal reveal--d2">
-            <p class="t-label">Languages</p>
-            <p>English · Italian · German · Spanish · Danish</p>
-          </div>
         </div>
         <div>
           <form id="contactForm" onsubmit="handleForm(event)" novalidate>
@@ -895,7 +911,6 @@ gtag('config','G-EGVGQKGH2D');
                 <option>City of Arts</option><option>Culinary &amp; Wine</option>
                 <option>Sports</option><option>Events &amp; Fashion Week</option>
                 <option>Craftmanship</option><option>Personalisation</option>
-                <option>Bespoke Multi-Experience</option>
               </select>
             </div>
             <div class="form-group">
@@ -923,12 +938,6 @@ gtag('config','G-EGVGQKGH2D');
         </div>
       </div>
 
-      <!-- Milan map — real embed from live site -->
-      <div class="map-wrap reveal" style="margin-top:2rem">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89547.27743323022!2d9.095332536259212!3d45.462704228143174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sMilan%2C%20Metropolitan%20City%20of%20Milan!5e0!3m2!1sen!2sit!4v1753475408087!5m2!1sen!2sit"
-                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
     </div>
   </section>
 </div>
@@ -984,7 +993,7 @@ gtag('config','G-EGVGQKGH2D');
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
       </div>
-      <p class="footer-copy" style="opacity:0.35;font-style:italic">Site by Victoria Swart</p>
+      <p class="footer-copy" style="opacity:0.35;font-style:italic">Made by Victoria Swart</p>
     </div>
   </div>
 </footer>
