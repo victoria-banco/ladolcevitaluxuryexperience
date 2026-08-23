@@ -271,11 +271,11 @@ function initCursorTargets() {
 initCursorTargets();
 
 /* ─── Contact form → Formspree ───
-   1. Go to https://formspree.io → New Form → enter info@ladolcevitaluxuryexperience.com
+   1. Go to https://formspree.io → New Form → enter victoria.c.swart@icloud.com
    2. Copy your Form ID (looks like: xyzabcde)
    3. Replace YOUR_FORMSPREE_ID below with it
 ─────────────────────────────────── */
-const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+const FORMSPREE_ID = 'mdavgjok';
 
 async function handleForm(e) {
   e.preventDefault();
@@ -306,12 +306,12 @@ async function handleForm(e) {
       const msg  = json?.errors?.map(e => e.message).join(', ') || 'Something went wrong.';
       btn.textContent = 'Try again';
       btn.disabled    = false;
-      alert(`Sorry — ${msg} Please email us directly at info@ladolcevitaluxuryexperience.com`);
+      alert(`Sorry — ${msg} Please email us directly at victoria.c.swart@icloud.com`);
     }
   } catch {
     btn.textContent = 'Try again';
     btn.disabled    = false;
-    alert('Network error. Please email us directly at info@ladolcevitaluxuryexperience.com');
+    alert('Network error. Please email us directly at victoria.c.swart@icloud.com');
   }
 }
 
